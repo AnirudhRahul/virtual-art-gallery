@@ -1,0 +1,24 @@
+{
+    "images": [
+        {
+            "title": "Acadia",
+            "file": "Acadia.jpg"
+        },
+        {
+            "title": "Hack",
+            "file": "Hack.webp"
+        },
+        {
+            "title": "StrawbPocky",
+            "file": "StrawbPocky.webp"
+        },
+        {
+            "title": "Winter",
+            "file": "Winter.jpg"
+        },
+        {
+            "title": "empT",
+            "file": "empT.jpg"
+        }
+    ]
+}

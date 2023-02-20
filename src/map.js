@@ -11,12 +11,23 @@ const transform = (a, r, tx, ty, o = 1) => a.map((v) => [(o * v[r] + tx) / 2, (o
 function hilbert(n) {
 	if (n === 1) return transform([[0, 0], [0, 1], [1, 1], [1, 0]], 0, 0.5, 0.5);
 	const h = hilbert(n - 1);
+
+
+	console.log("Hilbert")
+	console.log([
+		...transform(h, 1, 0, 0),
+		...transform(h, 0, 0, 1),
+		...transform(h, 0, 1, 1),
+		...transform(h, 1, 2, 1, -1)
+	])
+
 	return [
 		...transform(h, 1, 0, 0),
 		...transform(h, 0, 0, 1),
 		...transform(h, 0, 1, 1),
 		...transform(h, 1, 2, 1, -1)
 	];
+
 }
 
 function genBorder(n, w, m) {
@@ -85,6 +96,9 @@ function genBorder(n, w, m) {
 	// Fix start
 	if (n % 2) path.splice(0, 1, path[path.length - 1]);
 	else path.splice(-1, 1, path[0]);
+
+	console.log(path)
+	return [[0,0], [0.03, 0], [0.03, 0.03], [0, 0.03], [0, 0]]
 	return path;
 }
 
